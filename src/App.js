@@ -6,6 +6,7 @@ function App() {
     <div className={styles.body}>
       Hotel Prakhyat
      <p>Website Under Development</p>
+     <p>See You Soon !!</p>
     </div>
   );
 }
