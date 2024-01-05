@@ -1,0 +1,77 @@
+.navbar {
+    //width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+
+    .upper {
+        // width: 100%;
+        height: calc(80px  + 2.8vh);
+        background-color: #002B53;
+        position: relative;
+
+        .logo {
+            height: calc(3rem + 2vh);
+            width: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .menu {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 2.5rem;
+            margin-top: 3.4rem;
+            margin-bottom: 3.4rem;
+        }
+    }
+
+    .lower {
+        background-color: #002B53;
+        width: fit-content;
+        padding: 0rem 3%;
+        padding-bottom: 2%;
+        align-self: center;
+        transform: perspective(10px) rotateX(-2deg);
+        // margin-top: 1rem;
+
+        p {
+            transform: perspective(10px) rotateX(2deg);
+            margin: 0;
+        }
+
+        .title {
+            color: #F3EADD;
+            font-family: Playfair Display SC;
+            font-size: calc(2rem + 1.4vw);
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+        }
+
+        .hotel {
+            display: flex;
+            align-items: center;
+
+            .line {
+                margin: 0rem;
+                width: 40%;
+                height: 2px;
+                background-color: #F3EADD;
+            }
+
+            .hoteltitle {
+                color: #FEC365;
+                font-family: Tahoma;
+                font-size: calc(.7rem + .6vw);
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                margin: 0rem .5rem;
+            }
+        }
+    }
+}
