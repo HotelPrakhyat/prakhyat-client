@@ -1,13 +1,15 @@
 @import url('https://fonts.googleapis.com/css?family=Tahoma');
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Cormorant");
+@import url("https://fonts.googleapis.com/css?family=Montagu+Slab");
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC");
 body {
   margin: 0;
-  font-family: Tahoma,'Montserrat';
+  font-family: Tahoma,'Montserrat','Montagu Slab','Cormorant';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family:  Tahoma,'Montserrat';
+  font-family:  Tahoma,'Montserrat','Montagu Slab','Cormorant';
 }
