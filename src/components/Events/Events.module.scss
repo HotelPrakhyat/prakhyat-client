@@ -1,0 +1,118 @@
+.events {
+    background-color: #002B53;
+    padding: 5rem 0rem;
+
+    .head {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            color: rgba(162, 160, 165, 0.40);
+            font-family: Cormorant Garamond;
+            font-size: calc(3rem + 2vw);
+            font-style: normal;
+            font-weight: 600;
+            line-height: normal;
+            margin: 0;
+            margin: 0rem 1rem;
+        }
+
+        .line {
+            height: 1.5px;
+            background: rgba(162, 160, 165, 0.40);
+            width: 100%;
+        }
+    }
+
+    .sliders {
+        display: flex;
+        overflow: hidden;
+        flex-direction: column;
+
+        .images1 {
+            animation: 28s move-rtl linear infinite;
+            display: flex;
+            transform: translate(0, -50%);
+            justify-content: flex-start;
+
+            img {
+                margin: .5rem;
+                padding: .5rem;
+                height: calc(200px + 10vh);
+
+                width: auto;
+                transition: all 0.3s ease-in;
+            }
+
+        }
+
+        .images2 {
+            animation: 28s move-ltr linear infinite;
+            justify-content: flex-end;
+            display: flex;
+            transform: translate(0, -50%);
+
+            img {
+                margin: .5rem;
+                padding: .5rem;
+                height: calc(200px + 10vh);
+                width: auto;
+                transition: all 0.3s ease-in;
+            }
+
+        }
+
+        .container {
+            position: relative;
+            transition: all 0.4s ease-in;
+            p {
+                transition: all 0.4s ease-in;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+                color: #EEE4D9;
+                text-align: center;
+                font-family: Montserrat;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: normal;
+                display: none
+            }
+        }
+
+        .container:hover {
+            cursor: pointer;
+            img {
+                opacity: 0.7;
+            }
+
+            p {
+                display: block;
+            }
+        }
+    }
+
+    @keyframes move-rtl {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-100%);
+        }
+    }
+
+    @keyframes move-ltr {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(100%);
+        }
+    }
+}

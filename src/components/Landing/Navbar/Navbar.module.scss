@@ -1,15 +1,12 @@
+
 .navbar {
-    //width: 100vw;
     height: fit-content;
     display: flex;
     flex-direction: column;
-
     .upper {
-        // width: 100%;
         height: calc(80px  + 2.8vh);
         background-color: #002B53;
         position: relative;
-
         .logo {
             height: calc(3rem + 2vh);
             width: auto;
@@ -18,14 +15,13 @@
             left: 50%;
             transform: translate(-50%, -50%);
         }
-
         .menu {
             position: absolute;
-            top: 0;
+            top: 45%;
             right: 0;
             margin-right: 2.5rem;
-            margin-top: 3.4rem;
-            margin-bottom: 3.4rem;
+            // margin-top: 3.4rem;
+            // margin-bottom: 3.4rem;
         }
     }
 
@@ -35,21 +31,20 @@
         padding: 0rem 3%;
         padding-bottom: 2%;
         align-self: center;
-        transform: perspective(10px) rotateX(-2deg);
-        // margin-top: 1rem;
-
+       transform: perspective(10px) rotateX(-2deg);
         p {
-            transform: perspective(10px) rotateX(2deg);
+          transform: perspective(10px) rotateX(2deg);
             margin: 0;
+            color: white;
         }
 
         .title {
-            color: #F3EADD;
+            color: rgb(255, 255, 255);
             font-family: Playfair Display SC;
-            font-size: calc(2rem + 1.4vw);
+            font-size: calc(1.6rem + 1.4vw);
             font-style: normal;
             font-weight: 400;
-            line-height: normal;
+            letter-spacing: .05em;
         }
 
         .hotel {
@@ -60,16 +55,16 @@
                 margin: 0rem;
                 width: 40%;
                 height: 2px;
-                background-color: #F3EADD;
+                background-color: #FFF;
             }
 
             .hoteltitle {
                 color: #FEC365;
                 font-family: Tahoma;
-                font-size: calc(.7rem + .6vw);
-                font-style: normal;
+                font-size: calc(.5rem + .6vw);
                 font-weight: 700;
-                line-height: normal;
+                letter-spacing: .1em;
+                font-style: bold;
                 margin: 0rem .5rem;
             }
         }
