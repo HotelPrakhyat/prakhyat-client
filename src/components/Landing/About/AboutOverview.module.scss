@@ -112,12 +112,19 @@
             letter-spacing: .05em;
             line-height: normal;
             text-align: justify;
-            transition: all 0.3s ease-in-out;
+            transition: all .2s linear;
+            visibility: hidden;
             .diff {
                 margin: 0;
                 color: #DDBB95;
             }
         }
+        // .fadeOut{
+        //     opacity: 1;
+        // }
+        // .fadeIn{
+        //     opacity: 0.1;
+        // }
         .description {
             color: #FFF;
             text-align: justify;

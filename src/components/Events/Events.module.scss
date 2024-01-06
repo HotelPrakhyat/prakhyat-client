@@ -9,13 +9,14 @@
 
         p {
             color: rgba(162, 160, 165, 0.40);
-            font-family: Cormorant Garamond;
+            font-family: 'Cormorant';
             font-size: calc(3rem + 2vw);
             font-style: normal;
             font-weight: 600;
             line-height: normal;
             margin: 0;
             margin: 0rem 1rem;
+            
         }
 
         .line {
@@ -29,7 +30,7 @@
         display: flex;
         overflow: hidden;
         flex-direction: column;
-
+        margin-top: 1rem;
         .images1 {
             animation: 28s move-rtl linear infinite;
             display: flex;
@@ -39,8 +40,7 @@
             img {
                 margin: .5rem;
                 padding: .5rem;
-                height: calc(200px + 10vh);
-
+                height: calc(200px + 9vh);
                 width: auto;
                 transition: all 0.3s ease-in;
             }
@@ -67,7 +67,6 @@
             position: relative;
             transition: all 0.4s ease-in;
             p {
-                transition: all 0.4s ease-in;
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -80,14 +79,17 @@
                 font-style: normal;
                 font-weight: 600;
                 line-height: normal;
-                display: none
+                display: none;
+                transition: all 4s linear;
             }
         }
 
         .container:hover {
             cursor: pointer;
+            scale: 1.05;
             img {
                 opacity: 0.7;
+                
             }
 
             p {
