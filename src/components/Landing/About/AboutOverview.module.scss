@@ -106,7 +106,7 @@
         .title {
             color: #F3EADD;
             font-family: 'Cormorant';
-            font-size: calc(2rem + 1vw);
+            font-size: calc(2rem + .8vw);
             font-style: normal;
             font-weight: 600;
             letter-spacing: .05em;
@@ -129,9 +129,10 @@
             color: #FFF;
             text-align: justify;
             font-family: Montserrat;
-            font-size: calc(1.1rem + .2vw);
+            font-size: calc(.8rem + .8vw);
+            font-style: normal;
             font-weight: 300;
-            line-height: 40px;
+            line-height: calc(1.3rem + 1.2vw);
         }
     }
 }
