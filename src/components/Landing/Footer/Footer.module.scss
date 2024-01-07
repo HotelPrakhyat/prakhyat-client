@@ -22,6 +22,9 @@
             @media screen and (max-width:1200px) {
                 width: 50%;
             }
+            img{
+                width: calc(6rem + 3vw);
+            }
             .social {
                 width: 100%;
                 display: flex;
@@ -35,6 +38,9 @@
                     justify-content: center;
                    
                     align-items: center;
+                    img{
+                        width: calc(1rem + 2vw);
+                    }
                     a{
                         margin: 0rem 1rem;
                     }

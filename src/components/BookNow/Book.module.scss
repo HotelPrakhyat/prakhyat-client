@@ -1,0 +1,19 @@
+.book {
+    background-color: #CDCDC1;
+    padding: calc(4rem + 4vw) calc(1rem + 3vw);
+    //height: 100vh;
+    margin-top: 100px;
+
+  
+    .book2 {
+        border: 1px solid #949085;
+        background: #CDCDC1;
+        padding: calc(1rem + 1vw) calc(1rem + 2vw);
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            width: 50%
+        }
+    
+    }
+}

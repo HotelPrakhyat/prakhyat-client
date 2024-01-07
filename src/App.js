@@ -1,21 +1,39 @@
 import './App.css';
 import styles from "./AppSass.module.scss"
-import {front} from "./assets/index"
 import Landing from './components/Landing/Landing';
 import Navbar from './components/Landing/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
-
+import Footer from "./components/Landing/Footer/Footer"
 import { useState } from 'react';
+import { Routes, Route } from "react-router-dom";
+import Book from './components/BookNow/Book';
 function App() {
   const [sidebar, setSidebarr] = useState(false);
-  const setSidebar=(x)=>{
+
+  const setSidebar = (x) => {
     setSidebarr(x);
   }
+
+
+
   return (
     <div className={styles.body}>
-      {/* <Navbar/> */}
-      {sidebar && <Sidebar setSidebar={setSidebar}/>}
-     <Landing sidebar={sidebar} setSidebar={setSidebar}/>
+      <Navbar sidebar={sidebar} setSidebar={setSidebar} />
+      {sidebar && <Sidebar setSidebar={setSidebar} />}
+      <Routes>
+        <Route
+          path="/"
+          element={
+            
+            <Landing />
+            
+          }
+        />
+        <Route 
+        path='/book'
+        element={<Book/>}/>
+      </Routes>
+          <Footer />
     </div>
   );
 }

@@ -7,8 +7,7 @@ import RoomOverview from './Rooms/RoomOverview'
 import ServicesOverview from './Services/ServicesOverview'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
-import Footer from './Footer/Footer'
-export default function Landing({sidebar,setSidebar}) {
+export default function Landing() {
   const titleRef = useRef(null);
   
   useEffect(() => {
@@ -58,12 +57,12 @@ export default function Landing({sidebar,setSidebar}) {
   })
   return (
     <div className={styles.landing}>
-      <Hero sidebar={sidebar} setSidebar={setSidebar}/>
+      <Hero />
       <AboutOverview />
       <Events />
       <div ref={titleRef} >
       <ServicesOverview />
-      <Footer/>
+     
       </div>
     </div>
   )
