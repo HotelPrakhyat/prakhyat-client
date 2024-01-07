@@ -7,6 +7,7 @@ import RoomOverview from './Rooms/RoomOverview'
 import ServicesOverview from './Services/ServicesOverview'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import Footer from './Footer/Footer'
 export default function Landing() {
   const titleRef = useRef(null);
 
@@ -60,10 +61,11 @@ export default function Landing() {
       <Hero />
       <AboutOverview />
       <Events />
-      {/* <RoomOverview/> */}
+      {/*  */}
       <div ref={titleRef} >
 
       <ServicesOverview />
+      <Footer/>
       </div>
     </div>
   )

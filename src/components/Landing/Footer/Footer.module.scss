@@ -1,0 +1,86 @@
+.footer {
+    background-color: #002B53;
+    color: #CDCDC1;
+    font-family: 'Montserrat';
+    font-size: calc(1rem + .5vw);
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 0rem 3rem;
+    padding-bottom: calc(1rem + .8vw);
+  
+    letter-spacing: 0.96px;
+    .upper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        .logo {
+            width: fit-content;
+            margin: 1rem;
+            padding: calc(.5rem + .4vw) 0rem;
+            padding-right: 1rem;
+            .social {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                margin-top: 1vw;
+                p {
+                 
+                    align-self: flex-start;
+                }
+
+                .icons {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+            }
+        }
+
+        .links {
+            text-align: left;
+            padding: calc(.5rem + 0.4vw) 1rem;
+            margin: 1rem;
+           
+            @media screen and (max-width : 515px) {
+                display: none;
+            }
+            .link {
+              
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: calc(.4rem + .2vw);
+                a {
+                    margin: calc(.5rem + .5vw);
+                    margin-left: 0;
+                    text-align: left;
+                }
+                
+            }
+        }
+        .address{
+            margin: calc(.4rem  + 0.2vw);
+            padding: calc(.5rem + .4vw) 0rem;
+            padding-left: 1rem;
+            .desc{
+              display: flex;
+              align-items: center;
+             justify-content: flex-start;            
+              p{
+                margin-left: calc(.4rem  + 1vw);
+              }
+              img{
+                height: calc(1.3rem + .2vw);
+                width:  calc(1.3rem + .2vw);
+              }
+            }
+        }
+    }
+
+    .lower {
+        border-top: 1px solid #949085;
+        padding-top: 2rem;
+        p{margin: 0;}
+    }
+}
