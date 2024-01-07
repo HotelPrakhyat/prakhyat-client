@@ -61,9 +61,7 @@ export default function Landing() {
       <Hero />
       <AboutOverview />
       <Events />
-      {/*  */}
       <div ref={titleRef} >
-
       <ServicesOverview />
       <Footer/>
       </div>
