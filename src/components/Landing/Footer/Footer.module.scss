@@ -18,9 +18,13 @@
         flex-wrap: wrap;
         .logo {
             width: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
             margin: 1rem;
             padding: calc(.5rem + .4vw) 0rem;
-            padding-right: 1rem;
+            //padding-right: 1rem;
             .social {
                 width: 100%;
                 display: flex;
@@ -28,7 +32,7 @@
                 margin-top: 1vw;
                 p {
                  
-                    align-self: flex-start;
+                    align-self: center;
                 }
 
                 .icons {
@@ -64,6 +68,7 @@
             margin: calc(.4rem  + 0.2vw);
             padding: calc(.5rem + .4vw) 0rem;
             padding-left: 1rem;
+            text-align: left;
             .desc{
               display: flex;
               align-items: center;
