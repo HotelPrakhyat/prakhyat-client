@@ -63,12 +63,9 @@ export default function ServicesOverview() {
                     service.map((ele, ind) => {
                         return (<div key={ind} className={styles.service}>
 
-                            {/* <div className={styles.c1}>
-                                <div className={styles.c2}> */}
+                           
                                     <img src={ele.serviceImg} />
                                     <p>{ele.servieName}</p>
-                                {/* </div>
-                            </div> */}
                         </div>
                         )
                     })

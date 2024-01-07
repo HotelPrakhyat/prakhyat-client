@@ -4,12 +4,11 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // overflow: scroll;
     .head {
         display: flex;
         align-items: center;
-        justify-content: center;
-
+        align-self: flex-start;
+        width: 100%;
         p {
             color: #949085;
             font-family: 'Cormorant Garamond';
@@ -25,8 +24,6 @@
             margin-left: 1rem;
             width: 100%;
             background-color: rgba(148, 144, 133, 0.40);
-
-            ;
         }
     }
 

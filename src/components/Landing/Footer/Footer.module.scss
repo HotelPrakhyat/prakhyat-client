@@ -58,7 +58,7 @@
                 
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-               
+               width: 80%;
                 a {
                     margin: .4rem;
                     margin-top: calc(.8rem + 1vw);
