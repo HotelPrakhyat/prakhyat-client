@@ -35,13 +35,17 @@ export default function
           </div>
         </div>
         <div className={styles.address}>
+          <div className={styles.temp}>
           <p>Admin Office</p>
+          <div>
           <div className={styles.desc}><img src={location} alt="Location"/><p>
             9, Natural Pavitra Nagar, Dhamnode Road, Maheshwar.
             </p></div>
           <div className={styles.desc}><img src={phone} alt="Phone"/><p>+919165899611</p></div>
           <div className={styles.desc}><img src={email} alt='Email'/><p>hotelprakhyat@gmail.com</p></div>
+          </div>
         </div>
+          </div>
       </div>
       <div className={styles.lower}>
         <p>© 2024 Hotel Prakhyat. All Right Reserved.</p>

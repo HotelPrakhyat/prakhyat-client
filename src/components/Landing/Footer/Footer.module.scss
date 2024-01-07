@@ -5,88 +5,121 @@
     font-size: calc(1rem + .5vw);
     font-style: normal;
     font-weight: 500;
-    line-height: normal;
-    padding: 0rem 3rem;
-    padding-bottom: calc(.5rem + .8vw);
-    // overflow scroll;
-  
+    line-height: normal;  
     letter-spacing: 0.96px;
     .upper {
         display: flex;
         justify-content: space-evenly;
-        align-items: center;
         flex-wrap: wrap;
+      
         .logo {
-            width: fit-content;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: 1rem;
-            padding: calc(.5rem + .4vw) 0rem;
-            //padding-right: 1rem;
+            padding: calc(1.5rem + 1vw) 0px;
+            width: 33.3%;
+            @media screen and (max-width : 515px) {
+                width: 100%;
+            }
+            @media screen and (max-width:1200px) {
+                width: 50%;
+            }
             .social {
                 width: 100%;
                 display: flex;
                 flex-direction: column;
-                margin-top: 1vw;
                 p {
-                 
+                    
                     align-self: center;
                 }
-
                 .icons {
                     display: flex;
-                    justify-content: space-between;
+                    justify-content: center;
+                   
                     align-items: center;
+                    a{
+                        margin: 0rem 1rem;
+                    }
                 }
             }
         }
-
         .links {
+            width: 33.3%;
+            padding: calc(3rem + 1.4vw) 0px;
             text-align: left;
-            padding: calc(.5rem + 0.4vw) 1rem;
-            margin: 1rem;
-           
+            @media screen and (max-width:1200px) {
+                width: 50%;
+            }
+           p{
+            margin: 0;
+           }
             @media screen and (max-width : 515px) {
                 display: none;
             }
             .link {
-              
+                
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                gap: calc(.4rem + .2vw);
+               
                 a {
-                    margin: calc(.5rem + .5vw);
-                    margin-left: 0;
+                    margin: .4rem;
+                    margin-top: calc(.8rem + 1vw);
+                   // margin-left: 0;
                     text-align: left;
-                }
-                
+                    white-space: nowrap;
+                }   
             }
         }
         .address{
-            margin: calc(.4rem  + 0.2vw);
-            padding: calc(.5rem + .4vw) 0rem;
-            padding-left: 1rem;
-            text-align: left;
-            .desc{
+            padding: 72px 0px;
+            width: 33.3%;
+        text-align: left;
+        @media screen and (max-width:1200px) {
+            width: 100%;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: center;
+           margin: 0rem 2rem;
+           padding: 1rem 0;
+           //background-color: yellow;
+           .temp{
+            align-items: center;
+           }
+
+        }
+            .temp{
               display: flex;
-              align-items: center;
-             justify-content: flex-start;            
-              p{
-                margin-left: calc(.4rem  + 1vw);
+              flex-direction: column;
+             
+              justify-content: center;
+          // background-color: red;
+            p{
+                margin: 0;
+            }
+            .desc{
+                display: flex;
+                //margin: 1rem;
+                margin-top: calc(.8rem + 1vw);
+                align-items: center;
+                justify-content: flex-start;            
+               // background-color: red;
+                p{
+                    margin-left: calc(.4rem  + 1vw);
+                    //background-color: yellow;
               }
               img{
                 height: calc(1.3rem + .2vw);
                 width:  calc(1.3rem + .2vw);
+               // background-color: yellow;
               }
             }
         }
     }
+    }
 
     .lower {
         border-top: 1px solid #949085;
-        padding-top: 1rem;
-        p{margin: 0;}
+        margin: 0rem calc(1rem + 2vw);
+        p{margin: 0;
+        padding: 1rem 1rem;
+        }
     }
 }
