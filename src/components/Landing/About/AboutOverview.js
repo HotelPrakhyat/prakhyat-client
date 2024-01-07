@@ -1,7 +1,7 @@
 import React, { useEffect ,useRef} from 'react'
 import styles from "./AboutOverview.module.scss"
-import gsap from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import AOS from "aos"
+import 'aos/dist/aos.css'
 export default function AboutOverview() {
     const titleRef = useRef(null);
 
@@ -14,51 +14,9 @@ export default function AboutOverview() {
         "title": "",
         "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
     }
-    useEffect(()=>{
-            gsap.registerPlugin(ScrollTrigger);
-// REVEAL //
-gsap.utils.toArray([titleRef.current]).forEach(function (elem) {
-  ScrollTrigger.create({
-    trigger: elem,
-    start: "top 100%",
-    end: "bottom 10%",
-    markers: false,
-    onEnter: function () {
-      gsap.fromTo(
-        elem,
-        { y: 15, autoAlpha: 0 },
-        {
-          duration: .9,
-          y: 0,
-          autoAlpha: 1,
-          ease: "sine.in",
-          overwrite: "auto"
-        }
-      );
-    },
-    onLeave: function () {
-      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-    },
-    onEnterBack: function () {
-      gsap.fromTo(
-        elem,
-        { y: -10, autoAlpha: 0 },
-        {
-          duration: .9,
-          y: 0,
-          autoAlpha: 1,
-          ease: "back",
-          overwrite: "auto"
-        }
-      );
-    },
-    onLeaveBack: function () {
-      gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-    }
-  });
-});
-
-    },[])
+    useEffect(() => {
+      AOS.init({duration:2000,delay:"100"})
+    }, []);
     return (
         <div className={styles.about}>
             <div className={styles.count}>
@@ -81,8 +39,8 @@ gsap.utils.toArray([titleRef.current]).forEach(function (elem) {
                     <p className={styles.head}>HALLS</p>
                 </div>
             </div>
-            <div className={styles.content}>
-                <p className={`${styles.title} ${styles.fadeIn}`} ref={titleRef} >
+            <div className={styles.content} data-aos="fade-up">
+                <p className={`${styles.title} ${styles.fadeIn}`}>
                 We provide the best of both worlds: <span className={styles.diff}>luxury accommodation & full-serviced Rooms</span>. We are located in the most serene and beautiful area in the heart of nature.
                 </p>
                 <p className={styles.description}>

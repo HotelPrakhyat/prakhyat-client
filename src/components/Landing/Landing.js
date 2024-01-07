@@ -8,16 +8,16 @@ import ServicesOverview from './Services/ServicesOverview'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import Footer from './Footer/Footer'
-export default function Landing() {
+export default function Landing({sidebar,setSidebar}) {
   const titleRef = useRef(null);
-
+  
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     // REVEAL //
     gsap.utils.toArray([titleRef.current]).forEach(function (elem) {
       ScrollTrigger.create({
         trigger: elem,
-        start: "top 80%",
+        start: "top 100%",
         end: "bottom 10%",
         markers: false,
         onEnter: function () {
@@ -55,10 +55,10 @@ export default function Landing() {
       });
     });
 
-  }, [])
+  })
   return (
     <div className={styles.landing}>
-      <Hero />
+      <Hero sidebar={sidebar} setSidebar={setSidebar}/>
       <AboutOverview />
       <Events />
       <div ref={titleRef} >

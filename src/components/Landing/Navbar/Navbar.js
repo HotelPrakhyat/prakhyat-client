@@ -4,20 +4,16 @@ import logo from "../../../assets/logo.svg"
 import styles from "./Navbar.module.scss"
 import Sidebar from '../../Sidebar/Sidebar'
 export default function 
-() {
-  const [sidebar, setSidebar] = useState(false);
+({sidebar,setSidebar}) {
+  
   
   return (
     <>
-    {
-      sidebar&&<Sidebar setSidebar={setSidebar}/>
-    }
+   
     <div className={styles.navbar}>
         <div className={styles.upper}>
             <img src={logo} className={styles.logo}/>
-            <img src={menu} className={styles.menu} onClick={()=>{
-              setSidebar(!sidebar);
-            }}/>
+            <img src={menu} className={styles.menu} onClick={setSidebar}/>
         </div>
         <div className={styles.lower}>
         <p className={styles.title}>PRAKHYAT</p>
