@@ -24,7 +24,7 @@ export default function
           </div>
         </div>
         <div className={styles.links}>
-          <p>Quick Links</p>
+          <p className={styles.head}>Quick Links</p>
           <div className={styles.link}>
             <a>Home</a>
             <a>Services</a>
@@ -36,10 +36,10 @@ export default function
         </div>
         <div className={styles.address}>
           <div className={styles.temp}>
-          <p>Admin Office</p>
+          <p className={styles.head}>Admin Office</p>
           <div>
           <div className={styles.desc}><img src={location} alt="Location"/><p>
-            9, Natural Pavitra Nagar, Dhamnode Road, Maheshwar.
+            9, Natural Pavitra Nagar, Dhamnode Road, Maheshwar
             </p></div>
           <div className={styles.desc}><img src={phone} alt="Phone"/><p>+919165899611</p></div>
           <div className={styles.desc}><img src={email} alt='Email'/><p>hotelprakhyat@gmail.com</p></div>
