@@ -74,45 +74,23 @@
                 line-height: 40px;
                 white-space: nowrap;
                 /* 125% */
+                transition: all .4s linear;
             }
 
             img {
                 height: 50%;
+                transition: all .4s linear;
             }
 
-            .c1 {
-                transition: all .6s linear;
-
-                .c2 {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    transition: all .4s linear;
-
-
-                }
-            }
+            transition: all .4s linear;
+            
         }
 
         .service:hover {
             cursor: pointer;
-
-            .c1 {
-                border: 1px solid #002B53;
-                border-radius: 50%;
-                padding-bottom: .2rem;
-                width: fit-content;
-                height: fit-content;
-
-                .c2 {
-                    padding: 1.4rem;
-                    border-radius: 50%;
-                    border: 1px solid #002B53;
-                    rotate: -10deg;
-
-                }
-            }
+                    scale: 1.1;
+                    filter: brightness(5);
+             
         }
     }
 
@@ -123,7 +101,7 @@
         background: #CDCDC1;
         padding: .5rem 2rem;
         margin: 3rem;
-        transition: all 1s linear;
+        transition: all .2s linear;
         margin-bottom: 0;
         display: flex;
 
@@ -132,22 +110,22 @@
             color: #4F4F4F;
             text-align: justify;
             font-family: Montserrat;
-            font-size: 32px;
+            font-size: calc(1rem + .5vw);
             font-style: normal;
             font-weight: 600;
-            line-height: 40px;
+            line-height: calc(2rem + 1vw);
             /* 125% */
-            transition: all 1s linear;
+            transition: all .2s linear;
         }
         .imag{
             //display: none;
-            transition: display 1s linear;
+            transition: display 0.2s linear;
             height: fit-content;
             width: fit-content;
             img{
                 height: 0px;
                 width: 0px;
-                transition: all 1s ease-in-out;
+                transition: all .5s ease-in-out;
 
             }
         }
