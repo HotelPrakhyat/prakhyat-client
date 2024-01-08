@@ -3,7 +3,7 @@ import styles from "./Landing.module.scss"
 import Hero from './Hero/Hero'
 import AboutOverview from './About/AboutOverview'
 import Events from '../Events/Events'
-import RoomOverview from './Rooms/RoomOverview'
+// import RoomOverview from './Rooms/RoomOverview'
 import ServicesOverview from './Services/ServicesOverview'
 import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';

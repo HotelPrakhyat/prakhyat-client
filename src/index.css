@@ -6,7 +6,7 @@
 @import url("https://fonts.googleapis.com/css?family=Playfair+Display+SC");
 body {
   margin: 0;
-  font-family: Tahoma,'Montserrat','Montagu Slab','Cormorant Garamond';
+  font-family: Tahoma,'Montserrat','Montagu Slab','Cormorant Garamond','Cormorant';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;

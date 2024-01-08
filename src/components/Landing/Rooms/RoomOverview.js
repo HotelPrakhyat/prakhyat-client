@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from "./RoomOverview.module.scss"
-import room from "../../../assets/room.jpeg"
+// import room from "../../../assets/room.jpeg"
 import arrow from "../../../assets/arrow.svg"
 export default function RoomOverview() {
     return (
@@ -9,6 +9,7 @@ export default function RoomOverview() {
                 <div className={`${styles.title}`}>
 
                     {/* <img src={room} /> */}
+                    
                     <p>Rooms</p>
                 </div>
                 <div className={`${styles.title}`}>

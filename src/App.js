@@ -4,9 +4,11 @@ import Landing from './components/Landing/Landing';
 import Navbar from './components/Landing/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import Footer from "./components/Landing/Footer/Footer"
-import { useState } from 'react';
+import { useState,useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 import Book from './components/BookNow/Book';
+import AOS from "aos"
+import 'aos/dist/aos.css'
 function App() {
   const [sidebar, setSidebarr] = useState(false);
 
@@ -14,7 +16,9 @@ function App() {
     setSidebarr(x);
   }
 
-
+  useEffect(() => {
+    AOS.init({ duration: 1500, delay: "50" })
+  }, []);
 
   return (
     <div className={styles.body}>
@@ -25,13 +29,15 @@ function App() {
           path="/"
           element={
             
-            <Landing />
+          // <div data-aos="fade-up">
+            <Landing/>
+          // </div>
             
           }
         />
         <Route 
         path='/book'
-        element={<Book/>}/>
+        element={<div data-aos="fade-down"><Book/></div>}/>
       </Routes>
           <Footer />
     </div>

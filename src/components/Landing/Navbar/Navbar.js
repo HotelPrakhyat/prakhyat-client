@@ -1,10 +1,9 @@
-import React, { useState,useEffect } from 'react'
+import React from 'react'
 import menu from "../../../assets/menu.svg"
 import logo from "../../../assets/logo.svg"
 import styles from "./Navbar.module.scss"
-import Sidebar from '../../Sidebar/Sidebar'
 export default function
-  ({setSidebar }) {
+  Navbar({setSidebar }) {
 
   
 
@@ -13,8 +12,8 @@ export default function
 
       <div className={styles.navbar}>
         <div className={styles.upper}>
-          <img src={logo} className={styles.logo} />
-          <img src={menu} className={styles.menu} onClick={setSidebar} />
+          <img src={logo} className={styles.logo} alt="icon"/>
+          <img src={menu} className={styles.menu} onClick={setSidebar} alt="icon"/>
         </div>
         <div className={styles.lower}>
           <p className={styles.title}>PRAKHYAT</p>
