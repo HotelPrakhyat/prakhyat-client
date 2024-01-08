@@ -76,3 +76,20 @@
         }
     }
 }
+.navbar {
+    transition: background-color 0.4s ease-in, transform 0.4s ease; // Add other properties if needed
+  
+   
+  
+    .lower {
+      transition: opacity 0.4s ease-in; // Add other properties if needed
+  
+      &.invisible {
+        opacity: 0;
+        // Add other styles for the invisible state
+      }
+    }
+  
+    // Add other styles for the default state
+  }
+  
