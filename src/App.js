@@ -8,6 +8,7 @@ import { useState,useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 import Book from './components/BookNow/Book';
 import AOS from "aos"
+import Room from './components/Rooms/Room';
 import 'aos/dist/aos.css'
 function App() {
   const [sidebar, setSidebarr] = useState(false);
@@ -38,6 +39,9 @@ function App() {
         <Route 
         path='/book'
         element={<div data-aos="fade-down"><Book/></div>}/>
+        <Route 
+        path='/rooms'
+        element={<div data-aos="fade-up"><Room/></div>}/>
       </Routes>
           <Footer />
     </div>

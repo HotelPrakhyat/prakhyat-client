@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import menu from "../../../assets/menu.svg";
 import logo from "../../../assets/logo.svg";
 import styles from "./Navbar.module.scss";
-import AOS from "aos"
-import 'aos/dist/aos.css'
+// import AOS from "aos"
+// import 'aos/dist/aos.css'
 export default function Navbar({ setSidebar }) {
   const [scrollY, setScrollY] = useState(0);
 

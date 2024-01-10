@@ -11,7 +11,7 @@ import { Link } from 'react-router-dom'
 export default function Sidebar({ setSidebar }) {
   const pages = [{ "pageNo": "01", "pageName": "HOME" ,"link":"/"},
   { "pageNo": "02", "pageName": "ABOUT US" },
-  { "pageNo": "03", "pageName": "ROOMS" },
+  { "pageNo": "03", "pageName": "ROOMS" ,"link":"/rooms"},
   { "pageNo": "04", "pageName": "SERVICES" },
   { "pageNo": "05", "pageName": "EVENTS" },
   { "pageNo": "06", "pageName": "BOOK","link":"/book" },
