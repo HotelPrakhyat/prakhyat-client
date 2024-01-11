@@ -71,10 +71,12 @@ export default function ServicesOverview() {
                     })
                 }
             </div>
-            <div className={styles.btn}>
+           <div className={styles.button}>
+           <div className={styles.btn}>
                 <p>Explore</p>
                 <div className={styles.imag}>   <img src={arrow} alt="arrow" /></div>
             </div>
+           </div>
         </div>
     )
 }

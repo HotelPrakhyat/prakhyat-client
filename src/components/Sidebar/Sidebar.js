@@ -42,6 +42,7 @@ export default function Sidebar({ setSidebar }) {
 
                         <div>
                         <td><p className={styles.pageno}>{page.pageNo}</p></td>
+                        <td><div className={styles.line}></div></td>
                         <td>
                           <p className={styles.pagename}>{page.pageName}</p>
                         </td>
