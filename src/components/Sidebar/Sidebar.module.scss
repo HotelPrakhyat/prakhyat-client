@@ -4,8 +4,9 @@
     width: 100%;
     height: calc(100vh - 2rem);
     z-index: 20;
-    position:fixed;
-   padding: 1.5rem 0rem;
+    position: fixed;
+    padding: 1.5rem 0rem;
+
     img {
         height: calc(3rem + 2vw);
     }
@@ -15,7 +16,7 @@
         flex-direction: column;
         align-items: center;
         margin-top: 1vw;
-        
+
         p {
             margin: 0;
             margin: calc(1.2rem + 1vw) 0px;
@@ -24,8 +25,7 @@
 
         td {
             text-align: left;
-           // background-color: red;
-           transition: all 0.2s linear;
+            transition: all 0.2s linear;
         }
 
         tr {
@@ -33,16 +33,19 @@
             text-align: center;
             transition: all 0.2s linear;
         }
-        tr:hover{
-            td{
-                p{
+
+        tr:hover {
+            td {
+                p {
                     color: #FEC365;
                 }
-                .line{
+
+                .line {
                     display: block;
                 }
             }
         }
+
         .pageno {
             color: #FFF;
             font-family: 'Montserrat';
@@ -62,7 +65,8 @@
             font-weight: 600;
             line-height: normal;
         }
-        .line{
+
+        .line {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -75,27 +79,33 @@
             margin-left: calc(0.4rem + 0.4vw);
         }
     }
-    .close{
-     float: right;
+
+    .close {
+        float: right;
     }
-    .close:hover{
+
+    .close:hover {
         cursor: pointer;
     }
-    .icons{
-      
+
+    .icons {
+
         display: flex;
         align-items: center;
         justify-content: center;
-        img{
+
+        img {
             height: 40px;
             margin: 1rem;
         }
     }
 }
-.side{
+
+.side {
     overflow: scroll;
     height: 100%;
 }
-.side::-webkit-scrollbar{
+
+.side::-webkit-scrollbar {
     display: none;
 }

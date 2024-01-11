@@ -64,19 +64,19 @@ export default function ServicesOverview() {
                         return (<div key={ind} className={styles.service}>
 
 
-                            <img src={ele.serviceImg} alt="icon"/>
+                            <img src={ele.serviceImg} alt="icon" />
                             <p>{ele.servieName}</p>
                         </div>
                         )
                     })
                 }
             </div>
-           <div className={styles.button}>
-           <div className={styles.btn}>
-                <p>Explore</p>
-                <div className={styles.imag}>   <img src={arrow} alt="arrow" /></div>
+            <div className={styles.button}>
+                <div className={styles.btn}>
+                    <p>Explore</p>
+                    <div className={styles.imag}>   <img src={arrow} alt="arrow" /></div>
+                </div>
             </div>
-           </div>
         </div>
     )
 }

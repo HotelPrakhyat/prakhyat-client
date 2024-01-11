@@ -14,40 +14,44 @@ export default function RoomDesc() {
             setTypedText((prevText) => prevText + textToType[index]);
             index++;
             if (index === textToType.length - 1) {
-                
+
                 clearInterval(typingInterval);
             }
         }, 90);
-        return () => {clearInterval(typingInterval) 
+        return () => {
+            clearInterval(typingInterval)
         };
     }, [textToType]);
-    const details =[
-        {"image":room,
-        "area":"300 square feet",
-        "Price":"3000",
-        "title":"Single room",
-        "persons":[person,person],
-        "facilities":[{"icon":wifi,"facility":"TV"},{"icon":lift,"facility":"Bathtub"},{"icon":wifi,"facility":"Furniture"},{"icon":wifi,"facility":"Furniture"},{"icon":wifi,"facility":"Furniture"},{"icon":wifi,"facility":"Furniture"},{"icon":wifi,"facility":"Furniture"},{"icon":wifi,"facility":"Furniture"},
-        
-    ],
-    "index" : "1",
-    },
-    {"image":room,
-    "area":"300 square feet",
-    "Price":"3000",
-    "title":"Deluxe room",
-    "persons":[person,person,person,person],
-    "facilities":[{"icon":wifi,"facility":"TV"},{"icon":lift,"facility":"Bathtub"},{"icon":wifi,"facility":"Furniture"}],
-    "index":"2"
-},
-{"image":room,
-"area":"300 square feet",
-"Price":"3000",
-"title":"Suite",
-"persons":[person,person,person,person,person,person],
-"facilities":[{"icon":wifi,"facility":"TV"},{"icon":lift,"facility":"Bathtub"},{"icon":wifi,"facility":"Furniture"}],
-"index":"1"
-}
+    const details = [
+        {
+            "image": room,
+            "area": "300 square feet",
+            "Price": "3000",
+            "title": "Single room",
+            "persons": [person, person],
+            "facilities": [{ "icon": wifi, "facility": "TV" }, { "icon": lift, "facility": "Bathtub" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" },
+
+            ],
+            "index": "1",
+        },
+        {
+            "image": room,
+            "area": "300 square feet",
+            "Price": "3000",
+            "title": "Deluxe room",
+            "persons": [person, person, person, person],
+            "facilities": [{ "icon": wifi, "facility": "TV" }, { "icon": lift, "facility": "Bathtub" }, { "icon": wifi, "facility": "Furniture" }],
+            "index": "2"
+        },
+        {
+            "image": room,
+            "area": "300 square feet",
+            "Price": "3000",
+            "title": "Suite",
+            "persons": [person, person, person, person, person, person],
+            "facilities": [{ "icon": wifi, "facility": "TV" }, { "icon": lift, "facility": "Bathtub" }, { "icon": wifi, "facility": "Furniture" }],
+            "index": "1"
+        }
     ]
     return (
         <div className={styles.roomdesc}>
@@ -58,13 +62,13 @@ export default function RoomDesc() {
                 </div>
                 <p>We offer a variety of rooms and wellness packages for the purpose you can easily choose. We provide you with the best quality of services and facilities for all your travel and place needs.</p>
             </div>
-           {
-            details.map((detail,index)=>{
-                return(
-                    <RoomDetail detail={detail} index={index} key={index}/>
-                )
-            })
-           }
+            {
+                details.map((detail, index) => {
+                    return (
+                        <RoomDetail detail={detail} index={index} key={index} />
+                    )
+                })
+            }
         </div>
     )
 }

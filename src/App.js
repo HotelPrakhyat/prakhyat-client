@@ -7,8 +7,9 @@ import Footer from "./components/Landing/Footer/Footer"
 import { useState,useEffect } from 'react';
 import { Routes, Route } from "react-router-dom";
 import Book from './components/BookNow/Book';
-import AOS from "aos"
 import Room from './components/Rooms/Room';
+import Services from './components/Services/Services';
+import AOS from "aos"
 import 'aos/dist/aos.css'
 function App() {
   const [sidebar, setSidebarr] = useState(false);
@@ -42,6 +43,10 @@ function App() {
         <Route 
         path='/rooms'
         element={<div data-aos="fade-up"><Room/></div>}/>
+        <Route 
+        path ="/services"
+        element={<Services/>}
+        />
       </Routes>
           <Footer />
     </div>

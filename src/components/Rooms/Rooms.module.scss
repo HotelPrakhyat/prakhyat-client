@@ -16,6 +16,7 @@
         align-items: center;
         margin-top: calc(2rem + 3vw);
         width: 100%;
+
         .title {
             color: #F3EADD;
             text-shadow: 0px 10px 10px rgba(0, 0, 0, 0.50);
@@ -32,10 +33,11 @@
             display: flex;
             align-items: center;
             width: 50%;
+
             @media screen and (max-width:1024px) {
                 width: calc(100% - 1rem);
             }
-    
+
             justify-content: space-evenly;
             flex-wrap: wrap;
             margin-top: calc(2rem + 1vw);
@@ -173,10 +175,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
-   // background-color: red;
+    // background-color: red;
     overflow: hidden;
     padding: 2rem calc(0rem + 4vw);
     height: 100%;
+
     @media screen and (max-width:1024px) {
         flex-direction: column;
         justify-content: center;
@@ -255,8 +258,9 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-       justify-content: center;
-       // background-color: yellow;
+        justify-content: center;
+
+        // background-color: yellow;
         @media screen and (max-width:1024px) {
             width: calc(100% - 0rem);
         }
@@ -266,15 +270,18 @@
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
             padding: 0;
+
             @media screen and (max-width:1024px) {
                 width: calc(100% - 0rem);
             }
+
             .facility {
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 margin: 0rem calc(0.5rem + 0.5vw);
+
                 p {
                     margin: 0;
                     color: #4F4F4F;
@@ -318,6 +325,7 @@
             margin-bottom: calc(0.5rem + 0.5vw);
         }
     }
+
     .btn {
         border-radius: 48px;
         border: 1px solid #4F4F4F;
@@ -329,6 +337,7 @@
         margin-bottom: 0;
         display: flex;
         box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.50);
+
         p {
             margin: 0;
             color: #4F4F4F;
@@ -341,12 +350,14 @@
             /* 125% */
             transition: all .2s linear;
         }
-        .imag{
+
+        .imag {
             //display: none;
             transition: display 0.2s linear;
             height: fit-content;
             width: fit-content;
-            img{
+
+            img {
                 height: 0px;
                 width: 0px;
                 transition: all .5s ease-in-out;
@@ -354,7 +365,8 @@
             }
         }
     }
-    .btn:hover{
+
+    .btn:hover {
         cursor: pointer;
         scale: 1.04;
     }

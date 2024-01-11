@@ -9,12 +9,12 @@ import AOS from "aos"
 import 'aos/dist/aos.css'
 import { Link } from 'react-router-dom'
 export default function Sidebar({ setSidebar }) {
-  const pages = [{ "pageNo": "01", "pageName": "HOME" ,"link":"/"},
+  const pages = [{ "pageNo": "01", "pageName": "HOME", "link": "/" },
   { "pageNo": "02", "pageName": "ABOUT US" },
-  { "pageNo": "03", "pageName": "ROOMS" ,"link":"/rooms"},
-  { "pageNo": "04", "pageName": "SERVICES" },
+  { "pageNo": "03", "pageName": "ROOMS", "link": "/rooms" },
+  { "pageNo": "04", "pageName": "SERVICES","link":"/services" },
   { "pageNo": "05", "pageName": "EVENTS" },
-  { "pageNo": "06", "pageName": "BOOK","link":"/book" },
+  { "pageNo": "06", "pageName": "BOOK", "link": "/book" },
   { "pageNo": "07", "pageName": "CONTACT US" }
   ]
     ;
@@ -32,28 +32,28 @@ export default function Sidebar({ setSidebar }) {
           <div className={styles.links} >
             <table>
               <tbody>
-              {
-                pages.map((page,ind) => {
-                  return (
-                    <tr key={ind}>
-                      <Link to={page.link} onClick={()=>{
-                        setSidebar(false)
-                      }} style={{textDecoration:"none"}} >
+                {
+                  pages.map((page, ind) => {
+                    return (
+                      <tr key={ind}>
+                        <Link to={page.link} onClick={() => {
+                          setSidebar(false)
+                        }} style={{ textDecoration: "none" }} >
 
-                        <div>
-                        <td><p className={styles.pageno}>{page.pageNo}</p></td>
-                        <td><div className={styles.line}></div></td>
-                        <td>
-                          <p className={styles.pagename}>{page.pageName}</p>
-                        </td>
+                          <div>
+                            <td><p className={styles.pageno}>{page.pageNo}</p></td>
+                            <td><div className={styles.line}></div></td>
+                            <td>
+                              <p className={styles.pagename}>{page.pageName}</p>
+                            </td>
 
-                        </div>
-                      </Link>
+                          </div>
+                        </Link>
 
-                    </tr>
-                  )
-                })
-              }
+                      </tr>
+                    )
+                  })
+                }
               </tbody>
             </table>
           </div>
