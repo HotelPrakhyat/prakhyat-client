@@ -4,7 +4,7 @@
     padding: 6rem 0rem;
     justify-content: space-evenly;
     align-items: center;
-
+    
     @media screen and (max-width :1024px) {
         flex-direction: column;
     }
@@ -106,25 +106,34 @@
         .title {
             color: #F3EADD;
             font-family: 'Cormorant';
-            font-size: calc(2rem + 1vw);
+            font-size: calc(2rem + .8vw);
             font-style: normal;
             font-weight: 600;
             letter-spacing: .05em;
             line-height: normal;
             text-align: justify;
-            transition: all 0.3s ease-in-out;
+            transition: all .2s linear;
+           // visibility: hidden;
             .diff {
                 margin: 0;
                 color: #DDBB95;
             }
         }
+        // .fadeOut{
+        //     opacity: 1;
+        // }
+        // .fadeIn{
+        //     opacity: 0.1;
+        // }
         .description {
             color: #FFF;
             text-align: justify;
-            font-family: Montserrat;
-            font-size: calc(1.1rem + .2vw);
+            font-family: 'Montserrat';
+            font-size: calc(.8rem + .8vw);
+            font-style: normal;
             font-weight: 300;
-            line-height: 40px;
+            line-height: calc(1.3rem + 1.2vw);
+            
         }
     }
 }

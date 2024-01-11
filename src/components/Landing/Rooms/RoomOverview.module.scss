@@ -1,0 +1,112 @@
+.container {
+    background-color: #CDCDC1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 3rem;
+    height: 80vh;
+
+    .room {
+        width: 100%;
+        height: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        @media screen and (max-width :1024px) {
+            flex-direction: column;
+        }
+
+        .title {
+            position: relative;
+            color: #949085;
+            font-family: 'Cormorant Garamond';
+            font-size: 8rem;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            margin: 0;
+            img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: opacity 0.3s ease-in-out;
+                height: 50vh;
+
+            }
+
+            p {
+                margin: 0;
+            }
+        }
+
+        .title:hover {
+            cursor: pointer;
+            img {
+                opacity: 1;
+                z-index: 1;
+            }
+
+            p {
+                color: #fff;
+                z-index: 10;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+    }
+    
+    .lower{
+        transition: all 1s linear;
+        .lowerbtn {
+            transition: all 1s linear;
+            width: fit-content;
+            left: 50%;
+            
+            border-radius: 48px;
+            border: 1px solid #000;
+            background: #EEE4D9;
+            padding: 1rem 3rem;
+            p {
+                color: #4F4F4F;
+                text-align: justify;
+                font-family: Montserrat;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 600;
+                margin: 0;
+                line-height: 40px;
+            }
+           
+        }
+        .arrow{
+            width: fit-content;
+            left: 50%;
+            border-radius: 50%;
+           cursor: pointer;
+           transition: all 1s linear;
+            background-color: rgba(0, 0, 0, 0.25);;
+            padding: 2rem;
+            display: none;
+            img{
+                left: 50%;
+                top: 50%;
+            }
+        }
+    }
+    .lower:hover{
+        cursor: pointer;
+        .lowerbtn{
+            display: none;
+        }
+        .arrow{
+            display: block;
+        }
+    }
+}
