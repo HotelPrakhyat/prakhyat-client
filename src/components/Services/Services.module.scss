@@ -13,7 +13,8 @@
 
     .text1 {
         color: rgba(148, 144, 133, 0.50);
-        text-align: justify;
+        text-align: center;
+        letter-spacing: 0.1rem;
         font-family: 'Montagu Slab';
         font-size: calc(0.8rem + 0.8vw);
         font-style: normal;
@@ -216,11 +217,13 @@ a {
     border: 1px solid #949085;
     padding: calc(1rem + 1vw) calc(2rem + 2vw);
     margin: 1rem;
+
     @media screen and (max-width : 1024px) {
         flex-direction: column;
         padding: 0;
         padding-top: calc(1rem + 1vw);
     }
+
     p {
         margin: 0;
     }
@@ -249,6 +252,13 @@ a {
                 justify-content: center;
                 flex-direction: column;
                 align-items: center;
+                color: #949085;
+                text-align: center;
+                font-family: 'Montagu Slab';
+                font-size: calc(1rem + 0.8vw);
+                font-style: normal;
+                font-weight: 400;
+                line-height: calc(1rem + 0.8vw);
             }
         }
     }
@@ -261,7 +271,6 @@ a {
         font-style: normal;
         font-weight: 600;
         line-height: 40px;
-        /* 250% */
         letter-spacing: 3.2px;
         margin-top: calc(.4rem + 0.4vw);
     }
@@ -272,6 +281,7 @@ a {
         font-family: 'Cormorant';
         font-size: calc(1.8rem + 2vw);
         font-style: normal;
+        letter-spacing: .1rem;
         font-weight: 600;
     }
 
@@ -283,7 +293,7 @@ a {
         font-style: normal;
         font-weight: 400;
         line-height: calc(.8rem + 0.8vw);
-        margin: calc(.4rem + .8vw) calc(.5rem + .5vw);
+        margin: calc(1rem + .8vw) calc(.5rem + .5vw);
     }
 
     .content {
@@ -292,21 +302,25 @@ a {
         align-items: center;
         justify-content: center;
         width: 40%;
+
         @media screen and (max-width : 1024px) {
             width: 100%;
         }
     }
-    .image{
+
+    .image {
         width: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
+
         @media screen and (max-width : 1024px) {
             width: 100%;
             margin-top: calc(1rem + 1vw);
             padding: 0;
         }
-        img{
+
+        img {
             width: 100%;
         }
     }
