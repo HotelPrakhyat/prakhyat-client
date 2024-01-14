@@ -15,7 +15,7 @@ export default function Sidebar({ setSidebar }) {
   { "pageNo": "04", "pageName": "SERVICES","link":"/services" },
   { "pageNo": "05", "pageName": "EVENTS" },
   { "pageNo": "06", "pageName": "BOOK", "link": "/book" },
-  { "pageNo": "07", "pageName": "CONTACT US" }
+  { "pageNo": "07", "pageName": "CONTACT US","link":"/contact" }
   ]
     ;
   useEffect(() => {

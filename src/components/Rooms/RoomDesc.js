@@ -6,13 +6,13 @@ import wifi from "../../assets/wifi.svg"
 import person from "../../assets/person.svg"
 import RoomDetail from './RoomDetail'
 export default function RoomDesc() {
-    const textToType = "Coomfortably furnished spacious rooms with great accommodation";
+    const textToType = "Comfortably furnished spacious rooms with great accommodation";
     const [typedText, setTypedText] = useState('');
     useEffect(() => {
-        let index = 0;
+        let index = -1  ;
         const typingInterval = setInterval(() => {
-            setTypedText((prevText) => prevText + textToType[index]);
             index++;
+            setTypedText((prevText) => prevText + textToType[index]);
             if (index === textToType.length - 1) {
 
                 clearInterval(typingInterval);
