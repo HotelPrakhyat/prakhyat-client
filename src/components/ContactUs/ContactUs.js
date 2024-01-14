@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import style from "./Contact.module.scss"
 import downarrow from "../../assets/downarrow2.svg"
 import Contactdetails from './Contactdetails'
+
 export default function ContactUs
     () {
+
+        
     return (
         <div className={style.contact}>
             <div className={style.content}>

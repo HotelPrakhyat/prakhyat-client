@@ -1,26 +1,27 @@
 import React from 'react'
 import styles from "./Services.module.scss"
-export default function ServiceDesc({service}) {
+import { urlFor } from "../../apis/client";
+export default function ServiceDesc({service,index}) {
   return (
     <div className={styles.servicedesc}>
         <div className={styles.content} style={{
-          order: window.innerWidth >= 1024 ? service.index === '1' ? 1 : 2 : 1,
+          order: window.innerWidth >= 1024 ? index%2 !== 0 ? 1 : 2 : 1,
         }}>
             <div className={styles.c1}>
                 <div className={styles.c2}>
                     <div className={styles.c3}>
-                        {service.count}
+                        0{index+1}
                     </div>
                 </div>
             </div>
             <p className={styles.title}>SERVICES</p>
-            <p className={styles.name}>{service.name}</p>
-            <p className={styles.desc}>{service.desc}</p>
+            <p className={styles.name}>{service.servicename}</p>
+            <p className={styles.desc}>{service.servicedescription}</p>
         </div>
         <div className={styles.image} style={{
-          order: window.innerWidth >= 1024 ? service.index === '1' ? 2 : 1:2,
+          order: window.innerWidth >= 1024 ? index%2 !== 0 ? 2 : 1:2,
         }}>
-            <img src={service.img} alt="Service"/>
+            <img src={urlFor(service.image.asset._ref)} alt="Service"/>
         </div>
     </div>
   )

@@ -1,12 +1,18 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import styles from "./Services.module.scss"
 import downarrow from "../../assets/downarrow.svg"
 import wifi from "../../assets/wifi.svg"
 import ServiceDesc from './ServiceDesc'
-import room from "../../assets/room.jpeg"
 import AOS from "aos"
+import {fetchData} from "../../apis/fetch"
 import 'aos/dist/aos.css'
 export default function Services() {
+  const [servicesDesc,setservicesDesc] =useState(null)
+  useEffect(() => {
+    fetchData("services").then((data) => {
+      setservicesDesc(data);
+    });
+  }, []);
   const services = [
     {
       "icon": wifi,
@@ -34,40 +40,7 @@ export default function Services() {
       "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }
   ]
-  const servicesDesc = [
-    {
-      "count": "01",
-      "name": "Cleaning",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "img": room,
-      "index":"1"
-
-    },
-    {
-      "count": "02",
-      "name": "Cleaning",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "img": room,
-      "index": "2"
-
-    },
-    {
-      "count": "03",
-      "name": "Cleaning",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "img": room,
-      "index": "1"
-
-    },
-    {
-      "count": "04",
-      "name": "Cleaning",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam",
-      "img": room,
-      "index": "2"
-
-    }
-  ]
+  
   return (
     <div className={styles.services}>
       <p className={styles.text1}>WE OFFER</p>
@@ -99,10 +72,10 @@ export default function Services() {
 
       </div>
       {
-        servicesDesc.map((service) => {
+        servicesDesc && servicesDesc.map((service,index) => {
           return (
          <div data-aos="fade-up">
-             <ServiceDesc service={service} />
+             <ServiceDesc service={service} index={index}/>
           </div>
           )
         })

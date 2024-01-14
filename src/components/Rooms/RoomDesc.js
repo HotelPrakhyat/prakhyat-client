@@ -5,9 +5,26 @@ import lift from "../../assets/lift.svg"
 import wifi from "../../assets/wifi.svg"
 import person from "../../assets/person.svg"
 import RoomDetail from './RoomDetail'
+import {fetchData} from "../../apis/fetch";
+import { urlFor } from "../../apis/client";
 export default function RoomDesc() {
     const textToType = "Comfortably furnished spacious rooms with great accommodation";
     const [typedText, setTypedText] = useState('');
+    const [images,setImages] = useState({
+        "room":null,
+        "deluxe":null,
+        "suits":null
+      });
+      useEffect(() => {
+        fetchData("rooms").then((data) => {
+          setImages((prevContact) => ({
+            ...prevContact,
+            room: urlFor(data[0].roomimage.asset._ref),
+            deluxe: urlFor(data[0].deluxeimage.asset._ref),
+            suits: urlFor(data[0].sweetimage.asset._ref)
+          }));
+        });
+      }, []);
     useEffect(() => {
         let index = -1  ;
         const typingInterval = setInterval(() => {
@@ -24,7 +41,7 @@ export default function RoomDesc() {
     }, [textToType]);
     const details = [
         {
-            "image": room,
+            "image": images.room,
             "area": "300 square feet",
             "Price": "3000",
             "title": "Single room",
@@ -35,7 +52,7 @@ export default function RoomDesc() {
             "index": "1",
         },
         {
-            "image": room,
+            "image": images.deluxe,
             "area": "300 square feet",
             "Price": "3000",
             "title": "Deluxe room",
@@ -44,7 +61,7 @@ export default function RoomDesc() {
             "index": "2"
         },
         {
-            "image": room,
+            "image": images.suits,
             "area": "300 square feet",
             "Price": "3000",
             "title": "Suite",

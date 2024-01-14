@@ -1,14 +1,30 @@
-import React from 'react'
+import React,{useEffect, useState} from 'react'
 import styles from "./Detail.module.scss"
 import email from "../../assets/email2.svg"
 import phone from "../../assets/phone2.svg"
+import {fetchData} from "../../apis/fetch"
 export default function Contactdetails() {
+  const [contact,setContact] =useState({
+    "address":"Loading.....",
+    "phone":"Loading.....",
+    "email":"Loading....."
+  })
+  useEffect(() => {
+    fetchData("contactus").then((data) => {
+      setContact((prevContact) => ({
+        ...prevContact,
+        address: data[0].address,
+        phone: data[0].phone,
+        email: data[0].email
+      }));
+    });
+  }, []);
   return (
     <div className={styles.contactdetails}>
         
         <div className={styles.content}>
             <p className={styles.title}>ADDRESS</p>
-            <p className={styles.address}>9, Natural Pavitra Nagar, Dhamnod Road, Maheshwar</p>
+            <p className={styles.address}>{contact.address}</p>
             <div className={styles.line}></div>
             <div className={styles.detail}>
                 <div className={styles.icon}>
@@ -18,7 +34,7 @@ export default function Contactdetails() {
                 </div>
               <div className={styles.main}>
               <p className={styles.head}>Email Us</p>
-                <p className={styles.desc}>hotelprakhyat@gmail.com</p>
+                <p className={styles.desc}>{contact.email}</p>
               </div>
             </div>
             <div className={styles.detail}> 
@@ -29,7 +45,7 @@ export default function Contactdetails() {
                 </div>
                <div className={styles.main}>
                <p className={styles.head}>Call Us</p>
-                <p className={styles.desc}>+919165899611</p>
+                <p className={styles.desc}>{contact.phone}</p>
                </div>
             </div>
         </div>
