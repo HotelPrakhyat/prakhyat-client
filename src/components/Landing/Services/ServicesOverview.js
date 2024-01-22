@@ -56,7 +56,8 @@ export default function ServicesOverview() {
                 <div className={styles.line}></div>
             </div>
             <div className={styles.desc}>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>"Discover Comfort, Discover Convenience" - At Prakhyat Hotel, we blend seamless service with luxury. From spacious parking to tranquil gardens and elegant event spaces, each detail is crafted for your delight. Embrace the ease of cab services and city tours, all while enjoying the comfort of our well-appointed rooms.
+</p>
             </div>
             <div className={styles.services}>
                 {

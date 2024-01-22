@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import styles from "./Rooms.module.scss"
-import room from "../../assets/room.jpeg"
 import lift from "../../assets/lift.svg"
 import wifi from "../../assets/wifi.svg"
 import person from "../../assets/person.svg"
@@ -77,7 +76,7 @@ export default function RoomDesc() {
                 <div className={styles.animatedText}>
                     {typedText}
                 </div>
-                <p>We offer a variety of rooms and wellness packages for the purpose you can easily choose. We provide you with the best quality of services and facilities for all your travel and place needs.</p>
+                <p>We offer a variety of rooms for the purpose you can easily choose. We provide you with the best quality of services and facilities for all your travel and place needs.</p>
             </div>
             {
                 details.map((detail, index) => {

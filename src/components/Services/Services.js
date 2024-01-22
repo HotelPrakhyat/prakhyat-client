@@ -2,6 +2,12 @@ import React,{useState,useEffect} from 'react'
 import styles from "./Services.module.scss"
 import downarrow from "../../assets/downarrow.svg"
 import wifi from "../../assets/wifi.svg"
+import geyser from "../../assets/geyser.svg"
+import parking from "../../assets/parking.svg"
+import lift from "../../assets/lift.svg"
+import security from "../../assets/security.svg"
+import cab from "../../assets/taxi.svg"
+import tourguide from "../../assets/tourguide.svg"
 import ServiceDesc from './ServiceDesc'
 import AOS from "aos"
 import {fetchData} from "../../apis/fetch"
@@ -16,28 +22,22 @@ export default function Services() {
   const services = [
     {
       "icon": wifi,
-      "title": "Lift",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "title": "Wifi"
     }, {
-      "icon": wifi,
-      "title": "Parking",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "icon": parking,
+      "title": "Parking"
     }, {
-      "icon": wifi,
+      "icon": geyser,
       "title": "Geyser",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     }, {
-      "icon": wifi,
-      "title": "Wifi",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "icon": security,
+      "title": "Security",
     }, {
-      "icon": wifi,
-      "title": "Parking",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "icon": cab,
+      "title": "Cab Service",
     }, {
-      "icon": wifi,
-      "title": "Lift",
-      "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "icon": tourguide,
+      "title": "Tour Guide",
     }
   ]
   
@@ -64,7 +64,7 @@ export default function Services() {
                   </div>
                 </div>
                 <p>{service.title}</p>
-                <p className={styles.desc}>{service.desc}</p>
+                {/* <p className={styles.desc}>{service.desc}</p> */}
               </div>
             )
           })

@@ -12,7 +12,7 @@ export default function AboutOverview() {
     }
     const data = {
         "title": "",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        "description": "Welcome to Prakhyat Hotel, Where Maheshwar's Charm Meets Modern Comfort. Enter the enchanting world of Prakhyat Hotel, a place where the rich history of Maheshwar blends seamlessly with modern luxury. Feel the calm in every corner, from our peaceful garden to the delightful selfie spot. Let simple moments become precious memories amidst the beauty of our lush surroundings. At Prakhyat Hotel, we're more than just a place to stay; we create experiences that combine today's elegance with Maheshwar's timeless allure. Join us on a journey of discovery and delight, where each moment is a treasure, making your stay truly unforgettable."
     }
     useEffect(() => {
       AOS.init({duration:2000,delay:"100"})
@@ -41,7 +41,7 @@ export default function AboutOverview() {
             </div>
             <div className={styles.content} data-aos="fade-up">
                 <p className={`${styles.title} ${styles.fadeIn}`}>
-                We provide the best of both worlds: <span className={styles.diff}>luxury accommodation & full-serviced Rooms</span>. We are located in the most serene and beautiful area in the heart of nature.
+                We provide the best of both worlds: <span className={styles.diff}>luxury accommodation & full-serviced AC Rooms</span>. We are located in the most serene and beautiful area in the heart of nature.
                 </p>
                 <p className={styles.description}>
                     {data.description}

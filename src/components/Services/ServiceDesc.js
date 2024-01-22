@@ -21,7 +21,7 @@ export default function ServiceDesc({service,index}) {
         <div className={styles.image} style={{
           order: window.innerWidth >= 1024 ? index%2 !== 0 ? 2 : 1:2,
         }}>
-            <img src={urlFor(service.image.asset._ref)} alt="Service"/>
+            <img src={service.image && urlFor(service.image.asset._ref)} alt="Service"/>
         </div>
     </div>
   )
