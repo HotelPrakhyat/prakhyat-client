@@ -1,10 +1,24 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import styles from "./Book.module.scss"
 import room from "../../assets/reception.png"
 import reception from "../../assets/reception.svg"
 import phone from "../../assets/phone.svg"
 import email from "../../assets/email.svg"
+import {fetchData} from "../../apis/fetch"
 export default function Book() {
+    const [contact,setContact] =useState({
+        "phone":"Loading.....",
+        "email":"Loading....."
+      })
+      useEffect(() => {
+        fetchData("contactus").then((data) => {
+          setContact((prevContact) => ({
+            ...prevContact,
+            phone: data[0].phone,
+            email: data[0].email
+          }));
+        });
+      }, []);
     return (
         <div className={styles.book}>
             <div className={styles.book2}>
@@ -29,7 +43,7 @@ export default function Book() {
                                                 </div>
                                             </div>
                                         </div>
-                                            <p>+919165899611</p>
+                                            <p>{contact.phone}</p>
                                        </div>
                                       
                                        <div className={styles.temp}>
@@ -40,16 +54,11 @@ export default function Book() {
                                             </div>
                                             </div>
                                         </div>
-                                            <p>hotelprakhyat@gmail.com</p>
+                                            <p>{contact.email}</p>
                                        </div>
                                        </div>
 
                         </div>
-                        {/* <div className={styles.contact}>
-                            <div className={styles.icon}><img src={email} alt="Email"/>
-                            </div>
-                            <p>hotelprakhyat@gmail.com</p>
-                        </div> */}
                     </div>
                     </div>
                 </div>

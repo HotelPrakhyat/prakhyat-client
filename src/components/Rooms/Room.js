@@ -3,39 +3,34 @@ import styles from "./Rooms.module.scss"
 import downarrow from "../../assets/downarrow.svg"
 import RoomDesc from './RoomDesc';
 export default function Room() {
-  const text=["16 comfortable rooms", "11 spacious rooms","6 luxury suite"]
-  const [textShow, setText]=useState(text[0]);
-  useEffect(() => {
-    const interval = setInterval(() => {
-      const currentIndex = text.indexOf(textShow);
-      const nextIndex = (currentIndex + 1) % text.length;
-      setText(text[nextIndex]);
-    }, 2000);
+  const text = ["31 comfortable rooms", "25 spacious rooms", "6 luxury suite"]
+  const [textShow, setText] = useState(text[0]);
 
-    return () => clearInterval(interval);
-  }, [textShow, text]);
-  
+  const handleOptionHover = (index) => {
+    setText(text[index]);
+  };
+
   return (
-  <>
-   <div className={styles.room}>
-    <div className={styles.content}>
-    <p className={styles.title}>{textShow}</p>
-    <div className={styles.options}>
-      <p>Rooms</p>
-      <p>Deluxe</p>
-      <p>Suites</p>
-    </div>
-    <div className={styles.temp}>
-   <a href='#description'> <div className={styles.arrow}>
-      <img src={downarrow} alt="Arrow"/>
-      <p>CHOOSE</p>
-    </div></a>
-    </div>
-    </div>
-   </div>
-  <div id="description">
-  <RoomDesc />
-  </div>
-  </>
+    <>
+      <div className={styles.room}>
+        <div className={styles.content}>
+          <p className={styles.title}>{textShow}</p>
+          <div className={styles.options}>
+            <p onMouseEnter={() => handleOptionHover(0)}>Rooms</p>
+            <p onMouseEnter={() => handleOptionHover(1)}>Deluxe</p>
+            <p onMouseEnter={() => handleOptionHover(2)}>Suites</p>
+          </div>
+          <div className={styles.temp}>
+            <a href='#description'> <div className={styles.arrow}>
+              <img src={downarrow} alt="Arrow" />
+              <p>CHOOSE</p>
+            </div></a>
+          </div>
+        </div>
+      </div>
+      <div id="description">
+        <RoomDesc />
+      </div>
+    </>
   )
 }

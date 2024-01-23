@@ -4,12 +4,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    // margin-bottom: 2rem;
     .head {
         display: flex;
         align-items: center;
         align-self: flex-start;
         width: 100%;
+
         p {
             color: #949085;
             font-family: 'Cormorant Garamond';
@@ -75,24 +75,27 @@
             }
 
             img {
-                height: 50%;
+                //height: 50%;
                 transition: all .4s linear;
+                width: calc(2rem + 1.8vw);
+                margin: 0.8rem;
+                //width: fit-content;
             }
 
             transition: all .4s linear;
-            
+
         }
 
         .service:hover {
             cursor: pointer;
-                    scale: 1.1;
-                    filter: brightness(5);
-             
+            scale: 1.1;
+            filter: brightness(5);
+
         }
     }
 
     .btn {
-    
+
         border-radius: 48px;
         border: 1px solid #000;
         width: fit-content;
@@ -115,12 +118,14 @@
             /* 125% */
             transition: all .2s linear;
         }
-        .imag{
+
+        .imag {
             //display: none;
             transition: display 0.2s linear;
             height: fit-content;
             width: fit-content;
-            img{
+
+            img {
                 height: 0px;
                 width: 0px;
                 transition: all .5s ease-in-out;
@@ -128,26 +133,31 @@
             }
         }
     }
-    .btn:hover{
+
+    .btn:hover {
         border-radius: 1000px;
         padding: 2rem 2.4rem;
         cursor: pointer;
         box-shadow: 2px 2px #b8b8b8;
         border: none;
-        background-color: rgba(0, 0, 0, 0.25);;
-        p{
+        background-color: rgba(0, 0, 0, 0.25);
+        ;
+
+        p {
             display: none;
         }
-        .imag{
-           img{
-            height: 40px;
-            width: 40px;
-           }
+
+        .imag {
+            img {
+                height: 40px;
+                width: 40px;
+            }
         }
     }
-   
+
 }
-.button{
+
+.button {
     height: calc(5rem + 5vw);
     display: flex;
     justify-content: center;

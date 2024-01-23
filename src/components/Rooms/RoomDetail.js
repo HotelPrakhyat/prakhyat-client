@@ -3,6 +3,7 @@ import styles from './Rooms.module.scss';
 import { Link } from 'react-router-dom';
 
 export default function Room({ detail, index }) {
+
   return (
     <div className={styles.roomdetails}>
       <div
