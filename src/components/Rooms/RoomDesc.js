@@ -14,13 +14,25 @@ export default function RoomDesc() {
         "deluxe":null,
         "suits":null
       });
+      const [prices,setPrice]=useState({
+        "room":0,
+        "deluxe":0,
+        "suits":0
+      });
       useEffect(() => {
         fetchData("rooms").then((data) => {
+        //    console.log(data[0].roomimage.roomimage);
           setImages((prevContact) => ({
             ...prevContact,
-            room: urlFor(data[0].roomimage.asset._ref),
-            deluxe: urlFor(data[0].deluxeimage.asset._ref),
-            suits: urlFor(data[0].sweetimage.asset._ref)
+            room: urlFor(data[0].roomimage.roomimage.asset._ref),
+            deluxe: urlFor(data[0].deluxeimage.deluxeimage.asset._ref),
+            suits: urlFor(data[0].sweetimage.sweetimage.asset._ref)
+          }));
+          setPrice((prevContact) => ({
+            ...prevContact,
+            room: (data[0].roomimage.normalroomprice),
+            deluxe: (data[0].deluxeimage.deluxeroomprice),
+            suits: (data[0].sweetimage.sweetroomprice)
           }));
         });
       }, []);
@@ -42,7 +54,7 @@ export default function RoomDesc() {
         {
             "image": images.room,
             "area": "300 square feet",
-            "Price": "3000",
+            "Price": prices.room,
             "title": "Single room",
             "persons": [person, person],
             "facilities": [{ "icon": wifi, "facility": "TV" }, { "icon": lift, "facility": "Bathtub" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" },
@@ -53,7 +65,7 @@ export default function RoomDesc() {
         {
             "image": images.deluxe,
             "area": "300 square feet",
-            "Price": "3000",
+            "Price": prices.deluxe,
             "title": "Deluxe room",
             "persons": [person, person, person, person],
             "facilities": [{ "icon": wifi, "facility": "TV" }, { "icon": lift, "facility": "Bathtub" }, { "icon": wifi, "facility": "Furniture" }],
@@ -62,7 +74,7 @@ export default function RoomDesc() {
         {
             "image": images.suits,
             "area": "300 square feet",
-            "Price": "3000",
+            "Price": prices.suits,
             "title": "Suite",
             "persons": [person, person, person, person, person, person],
             "facilities": [{ "icon": wifi, "facility": "TV" }, { "icon": lift, "facility": "Bathtub" }, { "icon": wifi, "facility": "Furniture" }],

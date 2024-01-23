@@ -2,13 +2,13 @@ import React from 'react'
 import styles from "./Hero.module.scss"
 import book from "../../../assets/book.svg"
 import { Link } from 'react-router-dom'
-import hero from "../../../assets/hero.webm"
+// import hero from "../../../assets/hero.webm"
 export default function Hero() {
   return (
     <div className={styles.hero}>
         
           <video
-            src={hero}
+            // src={hero}
             type="video/mp4"
            
             autoPlay

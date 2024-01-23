@@ -10,7 +10,7 @@ import 'aos/dist/aos.css'
 import { Link } from 'react-router-dom'
 export default function Sidebar({ setSidebar }) {
   const pages = [{ "pageNo": "01", "pageName": "HOME", "link": "/" },
-  { "pageNo": "02", "pageName": "ABOUT US" },
+  { "pageNo": "02", "pageName": "ABOUT US","link":"/about" },
   { "pageNo": "03", "pageName": "ROOMS", "link": "/rooms" },
   { "pageNo": "04", "pageName": "SERVICES","link":"/services" },
   { "pageNo": "05", "pageName": "EVENTS" },

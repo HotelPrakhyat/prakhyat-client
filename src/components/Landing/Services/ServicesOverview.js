@@ -63,8 +63,6 @@ export default function ServicesOverview() {
                 {
                     service.map((ele, ind) => {
                         return (<div key={ind} className={styles.service}>
-
-
                             <img src={ele.serviceImg} alt="icon" />
                             <p>{ele.servieName}</p>
                         </div>

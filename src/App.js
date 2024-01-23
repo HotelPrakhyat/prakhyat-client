@@ -12,6 +12,7 @@ import Services from './components/Services/Services';
 import ContactUs from './components/ContactUs/ContactUs';
 import AOS from "aos"
 import 'aos/dist/aos.css'
+import About from './components/About/AboutF';
 function App() {
   const [sidebar, setSidebarr] = useState(false);
 
@@ -49,6 +50,10 @@ function App() {
             <ContactUs/>
           </div>
         }
+        />
+        <Route
+        element={<About/>}
+        path='/about'
         />
       </Routes>
           <Footer />
