@@ -62,7 +62,6 @@ export default function Landing() {
       <Events />
       <div ref={titleRef} >
       <ServicesOverview />
-     
       </div>
     </div>
   )

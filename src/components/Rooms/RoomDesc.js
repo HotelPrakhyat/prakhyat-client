@@ -53,7 +53,7 @@ export default function RoomDesc() {
     const details = [
         {
             "image": images.room,
-            "area": "300 square feet",
+            "area": "180 square feet",
             "Price": prices.room,
             "title": "Single room",
             "persons": [person, person],
@@ -64,7 +64,7 @@ export default function RoomDesc() {
         },
         {
             "image": images.deluxe,
-            "area": "300 square feet",
+            "area": "216 square feet",
             "Price": prices.deluxe,
             "title": "Deluxe room",
             "persons": [person, person, person, person],
@@ -73,7 +73,7 @@ export default function RoomDesc() {
         },
         {
             "image": images.suits,
-            "area": "300 square feet",
+            "area": "600 square feet",
             "Price": prices.suits,
             "title": "Suite",
             "persons": [person, person, person, person, person, person],
