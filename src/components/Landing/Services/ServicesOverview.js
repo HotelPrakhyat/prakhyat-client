@@ -1,53 +1,35 @@
 import React from 'react'
 import styles from "./ServicesOverview.module.scss"
-import geysers from "../../../assets/geyser.svg"
-import parking from "../../../assets/parking.svg"
-import lift from "../../../assets/lift.svg"
 import arrow from "../../../assets/arrow.svg"
 import wifi from "../../../assets/wifi.svg"
+import geyser from "../../../assets/geyser.svg"
+import parking from "../../../assets/parking.svg"
+import lift from "../../../assets/lift.svg"
+import security from "../../../assets/security.svg"
+import cab from "../../../assets/taxi.svg"
+import tourguide from "../../../assets/tourguide.svg"
+import { Link } from 'react-router-dom'
 export default function ServicesOverview() {
     const service = [
         {
-            "servieName": "Parking",
-            "serviceImg": parking
-        },
-        {
-            "servieName": "Geysers",
-            "serviceImg": geysers
-        },
-        {
-            "servieName": "Tour Packages",
-            "serviceImg": parking
-        },
-        {
-            "servieName": "Lift",
-            "serviceImg": lift
-        },
-        {
-            "servieName": "Wifi",
-            "serviceImg": wifi
-        },
-        {
-            "servieName": "TV",
-            "serviceImg": wifi
-        },
-        {
-            "servieName": "Shopping",
-            "serviceImg": wifi
-        },
-        {
-            "servieName": "Guide",
-            "serviceImg": wifi
-        },
-        {
-            "servieName": "Guide",
-            "serviceImg": wifi
-        },
-        {
-            "servieName": "Guide",
-            "serviceImg": wifi
-        },
-
+            "icon": wifi,
+            "title": "Wifi"
+          }, {
+            "icon": parking,
+            "title": "Parking"
+          }, {
+            "icon": geyser,
+            "title": "Geyser",
+          }, {
+            "icon": security,
+            "title": "Security",
+          }, {
+            "icon": cab,
+            "title": "Cab Service",
+          }, {
+            "icon": tourguide,
+            "title": "Tour Guide",
+          }
     ]
     return (
         <div className={styles.services}>
@@ -63,19 +45,21 @@ export default function ServicesOverview() {
                 {
                     service.map((ele, ind) => {
                         return (<div key={ind} className={styles.service}>
-                            <img src={ele.serviceImg} alt="icon" />
-                            <p>{ele.servieName}</p>
+                            <img src={ele.icon} alt="icon" />
+                            <p>{ele.title}</p>
                         </div>
                         )
                     })
                 }
             </div>
+            <Link to="/services"> 
             <div className={styles.button}>
                 <div className={styles.btn}>
                     <p>Explore</p>
                     <div className={styles.imag}>   <img src={arrow} alt="arrow" /></div>
                 </div>
             </div>
+            </Link>
         </div>
     )
 }

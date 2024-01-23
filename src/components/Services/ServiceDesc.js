@@ -10,7 +10,9 @@ export default function ServiceDesc({service,index}) {
             <div className={styles.c1}>
                 <div className={styles.c2}>
                     <div className={styles.c3}>
-                        0{index+1}
+                        {
+                          (index+1)<10? "0"+(index+1):(index+1)
+                        }
                     </div>
                 </div>
             </div>
