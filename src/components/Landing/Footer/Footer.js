@@ -7,7 +7,8 @@ import instagram from "../../../assets/instagram.svg"
 import phone from "../../../assets/phone.svg"
 import email from "../../../assets/email.svg"
 import location from "../../../assets/location.svg"
-export default function
+import { Link } from 'react-router-dom'
+export default function Footer
   () {
   return (
     <div className={styles.footer}>
@@ -17,21 +18,21 @@ export default function
           <div className={styles.social}>
           <p>Follow us</p>
           <div className={styles.icons}>
-          <a>  <img src={facbook} alt="facebook"/></a>
-          <a>  <img src={youtube} alt ="Youtube"/></a>
-          <a>  <img src={instagram} alt="Instagram"/></a>
+          <a href="#">  <img src={facbook} alt="facebook"/></a>
+          <a href="#">  <img src={youtube} alt ="Youtube"/></a>
+          <a href="#">  <img src={instagram} alt="Instagram"/></a>
           </div>
           </div>
         </div>
         <div className={styles.links}>
           <p className={styles.head}>Quick Links</p>
           <div className={styles.link}>
-            <a>Home</a>
-            <a>Services</a>
-            <a>About Us</a>
-            <a>Events</a>
-            <a>Rooms</a>
-            <a>Contact Us</a>
+            <Link to="/" className={styles.a}>Home</Link>
+            <Link to="/services" className={styles.a}>Services</Link>
+            <Link to="/about" className={styles.a}>About Us</Link>
+            <Link to="/events" className={styles.a}>Events</Link>
+            <Link to="/rooms" className={styles.a}>Rooms</Link>
+            <Link to="/contact" className={styles.a}>Contact Us</Link>
           </div>
         </div>
         <div className={styles.address}>
@@ -42,7 +43,7 @@ export default function
             9, Natural Pavitra Nagar, Dhamnode Road, Maheshwar
             </p></div>
           <div className={styles.desc}><img src={phone} alt="Phone"/><p>+919165899611</p></div>
-          <div className={styles.desc}><img src={email} alt='Email'/><p>hotelprakhyat@gmail.com</p></div>
+          <div className={styles.desc}><img src={email} alt='Email'/><p><a href="mailto:hotelprakhyat@gmail.com">hotelprakhyat@gmail.com</a></p></div>
           </div>
         </div>
           </div>
