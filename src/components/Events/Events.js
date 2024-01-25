@@ -1,17 +1,14 @@
-import React,{useEffect,useState} from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./Events.module.scss"
-import {fetchData} from "../../apis/fetch"
+import { fetchData } from "../../apis/fetch"
 import { urlFor } from "../../apis/client";
 export default function Events() {
-    const [data,setData]=useState(null);
-    useEffect(()=>{
+    const [data, setData] = useState(null);
+    useEffect(() => {
         fetchData("events").then((data) => {
-            // console.log(data[0].eventimages);
-           setData(data);
-           console.log(data)
-           // console.log(data[0].eventname)
-          });
-    },[])
+            setData(data);
+        });
+    }, [])
     return (
 
         <div className={styles.events}>
@@ -21,32 +18,32 @@ export default function Events() {
                 <div className={styles.line}></div>
             </div>
             <div className={styles.sliders}>
-                    <div className={styles.images1}>
-                {
-                    data && data.map((events) => {
-                        return (
-                                        <div className={styles.container}>
-                                            <img src={urlFor(events.eventimages[0].asset._ref)} alt="event"/>
-                                            <p>{events.eventname}</p>
-                                        </div>
-                        )
-                    })
-                }
-                    </div>
-                    <div className={styles.images2}>
-                {
-                    data && data.map((events) => {
-                        return (
-                               
-                                        <div className={styles.container}>
-                                        <img src={urlFor(events.eventimages[0].asset._ref)} alt="event"/>
-                                            <p>{events.eventname}</p>
-                                        </div>
-                                  
-                                  )
-                                })
-                            }
-                            </div>
+                <div className={styles.images1}>
+                    {
+                        data && data.map((events) => {
+                            return (
+                                <div className={styles.container}>
+                                    <img src={urlFor(events.eventimages[0].asset._ref)} alt="event" />
+                                    <p>{events.eventname}</p>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+                <div className={styles.images2}>
+                    {
+                        data && data.map((events) => {
+                            return (
+
+                                <div className={styles.container}>
+                                    <img src={urlFor(events.eventimages[0].asset._ref)} alt="event" />
+                                    <p>{events.eventname}</p>
+                                </div>
+
+                            )
+                        })
+                    }
+                </div>
             </div>
         </div>
     )
