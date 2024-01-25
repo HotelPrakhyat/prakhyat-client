@@ -1,14 +1,9 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import styles from "./Events.module.scss"
 import Card from './Card'
-import { fetchData } from "../../apis/fetch"
-export default function EventsCards({setHead,setImages}) {
-    const [data, setData] = useState(null);
-    useEffect(() => {
-        fetchData("events").then((data) => {
-            setData(data);
-        });
-    }, [])
+
+export default function EventsCards({setHead,setImages,data}) {
+  
     return (
         <div className={styles.eventcards} >
             {

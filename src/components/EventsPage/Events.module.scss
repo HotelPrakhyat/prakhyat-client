@@ -153,56 +153,22 @@
     grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
     padding: 6vw;
     @media screen and (max-width : 756px) {
-        // padding: 1.8rem;
         grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
         padding: 2vw;
     }
 }
-
-// .images{
-//     background-color: rgba(205, 205, 193, 1);
-//     padding: 3vw;
-//     display: grid;
-//     grid-gap: 4vw;
-//     grid-template-columns: repeat(auto-fit,minmax(35%,1fr));
-//     // grid-auto-rows: calc(25vw + 5rem);
-//     overflow: hidden;
-//     grid-auto-flow: dense;
-// img{
-//     max-width: 100%;
-//     height: auto;
-//     vertical-align: middle;
-//     display: inline-block;
-// }
-// .img{
-//     background-color: red;
-// }
-// }
-// .images > div{
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-// }
-// .images > div >img{
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-// }
 .images {
-    // width: 100%;
     margin: 0 auto;
     column-count: 2;
     column-gap: 3vw;
     overflow: hidden;
     padding: 5vw;
+    background-color: rgba(205, 205, 193, 1);
     .img {
         overflow: hidden;
-       // margin: 0;
         width: 100%;
         img{
            margin: 0 0 2vw 0;
-        //   margin: 2rem;
-        //   width: 50%;
         width: 100%;
         }
         }
