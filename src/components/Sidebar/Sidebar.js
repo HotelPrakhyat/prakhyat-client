@@ -13,7 +13,7 @@ export default function Sidebar({ setSidebar }) {
   { "pageNo": "02", "pageName": "ABOUT US","link":"/about" },
   { "pageNo": "03", "pageName": "ROOMS", "link": "/rooms" },
   { "pageNo": "04", "pageName": "SERVICES","link":"/services" },
-  { "pageNo": "05", "pageName": "EVENTS" },
+  { "pageNo": "05", "pageName": "EVENTS" ,"link":"/events"},
   { "pageNo": "06", "pageName": "BOOK", "link": "/book" },
   { "pageNo": "07", "pageName": "CONTACT US","link":"/contact" }
   ]
