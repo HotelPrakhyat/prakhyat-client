@@ -5,7 +5,7 @@ import Navbar from './components/Landing/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import Footer from "./components/Landing/Footer/Footer"
 import { useState,useEffect } from 'react';
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route,useLocation } from "react-router-dom";
 import Book from './components/BookNow/Book';
 import Room from './components/Rooms/Room';
 import Services from './components/Services/Services';
@@ -16,6 +16,7 @@ import About from './components/About/AboutF';
 import EventsPage from './components/EventsPage/EventsPage';
 function App() {
   const [sidebar, setSidebarr] = useState(false);
+  const location = useLocation();
 
   const setSidebar = (x) => {
     setSidebarr(x);
@@ -23,6 +24,11 @@ function App() {
   useEffect(() => {
     AOS.init({ duration: 1500, delay: "50" })
   }, []);
+  useEffect(() => {
+    // Scroll to the top whenever the route changes
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <div className={styles.body}>
       <Navbar sidebar={sidebar} setSidebar={setSidebar} />

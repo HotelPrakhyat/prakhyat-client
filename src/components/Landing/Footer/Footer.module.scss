@@ -66,12 +66,14 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                width: 80%;
-                a {
+                .a {
                     margin: .4rem;
                     margin-top: calc(.8rem + 1vw);
                    // margin-left: 0;
                     text-align: left;
                     white-space: nowrap;
+                    text-decoration: none;
+                    color: rgba(240, 239, 235, 1);
                 }   
             }
         }
@@ -104,20 +106,22 @@
             }
             .desc{
                 display: flex;
-                //margin: 1rem;
                 margin-top: calc(.8rem + 1vw);
                 align-items: center;
-                justify-content: flex-start;            
-               // background-color: red;
+                justify-content: flex-start; 
+                color: rgba(240, 239, 235, 1);           
                 p{
                     margin-left: calc(.4rem  + 1vw);
-                    //background-color: yellow;
               }
               img{
                 height: calc(1.3rem + .2vw);
                 width:  calc(1.3rem + .2vw);
-               // background-color: yellow;
               }
+              a{
+               
+                color: rgba(240, 239, 235, 1);   
+              }
+              
             }
         }
     }

@@ -2,14 +2,20 @@ import React, { useEffect, useState } from 'react';
 import styles from "./Rooms.module.scss"
 import downarrow from "../../assets/downarrow.svg"
 import RoomDesc from './RoomDesc';
+import Gallery from '../Gallery/Gallery';
+import { fetchData } from '../../apis/fetch';
 export default function Room() {
   const text = ["31 comfortable rooms", "25 spacious rooms", "6 luxury suite"]
   const [textShow, setText] = useState(text[0]);
-
+  const [images,setImages] = useState(null);
   const handleOptionHover = (index) => {
     setText(text[index]);
   };
-
+useEffect(()=>{
+  fetchData("roomsgallery").then((data)=>{
+    setImages(data[0].roomimage);
+  })
+},[])
   return (
     <>
       <div className={styles.room}>
@@ -31,6 +37,9 @@ export default function Room() {
       <div id="description">
         <RoomDesc />
       </div>
+      {
+        images && <Gallery images={images} title="GALLERY"/>
+      }
     </>
   )
 }
