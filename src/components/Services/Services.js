@@ -8,6 +8,7 @@ import lift from "../../assets/lift.svg"
 import security from "../../assets/security.svg"
 import cab from "../../assets/taxi.svg"
 import tourguide from "../../assets/tourguide.svg"
+import ac from "../../assets/ac.svg"
 import ServiceDesc from './ServiceDesc'
 import AOS from "aos"
 import {fetchData} from "../../apis/fetch"
@@ -20,6 +21,10 @@ export default function Services() {
     });
   }, []);
   const services = [
+    {
+      "icon": ac,
+      "title": "A.C."
+    },
     {
       "icon": wifi,
       "title": "Wifi"

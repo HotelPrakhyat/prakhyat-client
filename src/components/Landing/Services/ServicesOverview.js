@@ -8,9 +8,14 @@ import lift from "../../../assets/lift.svg"
 import security from "../../../assets/security.svg"
 import cab from "../../../assets/taxi.svg"
 import tourguide from "../../../assets/tourguide.svg"
+import ac from "../../../assets/ac.svg"
 import { Link } from 'react-router-dom'
 export default function ServicesOverview() {
     const service = [
+        {
+            "icon": ac,
+            "title": "A.C."
+          },
         {
             "icon": wifi,
             "title": "Wifi"
