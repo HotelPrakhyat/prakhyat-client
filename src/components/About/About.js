@@ -1,15 +1,10 @@
 import React, { useEffect,useState } from 'react'
 import styles from "./About.module.scss"
 import downarrow from "../../assets/downarrow.svg"
-import {fetchData} from "../../apis/fetch"
+
 export default function About() {
-    const [description,setDesc]=useState("Prakhyat Hotel - Where Every Stay is a Story, Every Guest a Family.");
-    useEffect(() => {
-      fetchData("about").then((data) => {
-        // setDesc(data);
-        setDesc(data[0].about);
-      });
-    }, []);
+    const [description,setDesc]=useState("Prakhyat Hotel - Your Gateway to Elegance and Comfort in Maheshwar;");
+  
   return (
     <div className={styles.about}>
         <div className={styles.content}>
