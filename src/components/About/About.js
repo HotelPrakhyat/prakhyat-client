@@ -3,7 +3,7 @@ import styles from "./About.module.scss"
 import downarrow from "../../assets/downarrow.svg"
 
 export default function About() {
-    const [description,setDesc]=useState("Prakhyat Hotel - Your Gateway to Elegance and Comfort in Maheshwar;");
+    const [description,setDesc]=useState("Prakhyat Hotel - Your Gateway to Elegance and Comfort in Maheshwar");
     const handleScroll = () => {
       window.scrollTo({
         top: window.scrollY + window.innerHeight, // Scroll down by 100vh
