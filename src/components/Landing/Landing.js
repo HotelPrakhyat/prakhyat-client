@@ -9,7 +9,7 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 export default function Landing() {
   const titleRef = useRef(null);
-  
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     // REVEAL //
@@ -61,7 +61,7 @@ export default function Landing() {
       <AboutOverview />
       <Events />
       <div ref={titleRef} >
-      <ServicesOverview />
+        <ServicesOverview />
       </div>
     </div>
   )
