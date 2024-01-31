@@ -1,10 +1,13 @@
 .about {
-    padding-top: calc(10rem + 7vw);
     background-image: url("../../assets/room.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
-
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     .content {
+        padding-top: calc(10rem + 7vw);
         .contentbox {
             padding: calc(2rem + 2vw) calc(0rem + 8vw);
             padding-bottom: 0;

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import styles from "./About.module.scss"
 import {fetchData} from "../../apis/fetch"
 export default function AboutDesc() {
-    const textToType = "Welcome to Prakhyat Hotel, nestled in the serene embrace of 9, Natural Pavitra Nagar, on the picturesque Dhamnode Road in Maheshwar.";
+    const textToType = "Welcome to Prakhyat Hotel, nestled in the serene embrace of Maheshwar.";
     const [typedText, setTypedText] = useState('');
     const [details, setDetails] = useState([
         {
