@@ -1,8 +1,16 @@
 import React, { useState, useEffect } from 'react'
 import styles from "./Rooms.module.scss"
-import lift from "../../assets/lift.svg"
 import wifi from "../../assets/wifi.svg"
 import person from "../../assets/person.svg"
+import tv from "../../assets/tv.svg"
+import wardrobe from "../../assets/wardrobe.svg"
+import hairdryer from "../../assets/hairdryer.svg"
+import fridge from "../../assets/fridge.svg"
+import bed from "../../assets/bed.svg"
+import sofa from "../../assets/sofa.svg"
+import studytable from "../../assets/studytable.svg"
+import housekeeping from "../../assets/housekeeping.svg"
+import bathtub from "../../assets/bathtub.svg"
 import RoomDetail from './RoomDetail'
 import {fetchData} from "../../apis/fetch";
 import { urlFor } from "../../apis/client";
@@ -57,7 +65,7 @@ export default function RoomDesc() {
             "Price": prices.room,
             "title": "Single room",
             "persons": [person, person],
-            "facilities": [{ "icon": wifi, "facility": "TV" }, { "icon": lift, "facility": "Bathtub" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" }, { "icon": wifi, "facility": "Furniture" },
+            "facilities": [{ "icon": wifi, "facility": "Wifi" }, { "icon": tv, "facility": "TV" }, { "icon": wardrobe, "facility": "Wardrobe" }, { "icon": bed, "facility": "Bed" }, { "icon": housekeeping, "facility": "Housekeeping" }, { "icon": hairdryer, "facility": "Hair dryer" },
 
             ],
             "index": "1",
@@ -68,7 +76,7 @@ export default function RoomDesc() {
             "Price": prices.deluxe,
             "title": "Deluxe room",
             "persons": [person, person, person, person],
-            "facilities": [{ "icon": wifi, "facility": "TV" }, { "icon": lift, "facility": "Bathtub" }, { "icon": wifi, "facility": "Furniture" }],
+            "facilities": [{ "icon": wifi, "facility": "Wifi" }, { "icon": tv, "facility": "TV" }, { "icon": wardrobe, "facility": "Wardrobe" }, { "icon": bed, "facility": "Bed" }, { "icon": housekeeping, "facility": "Housekeeping" }, { "icon": hairdryer, "facility": "Hair dryer" },],
             "index": "2"
         },
         {
@@ -77,7 +85,7 @@ export default function RoomDesc() {
             "Price": prices.suits,
             "title": "Suite",
             "persons": [person, person, person, person, person, person],
-            "facilities": [{ "icon": wifi, "facility": "TV" }, { "icon": lift, "facility": "Bathtub" }, { "icon": wifi, "facility": "Furniture" }],
+            "facilities": [{ "icon": wifi, "facility": "Wifi" }, { "icon": tv, "facility": "TV" }, { "icon": wardrobe, "facility": "Wardrobe" }, { "icon": bed, "facility": "Bed" }, { "icon": housekeeping, "facility": "Housekeeping" }, { "icon": hairdryer, "facility": "Hair dryer" },{"icon": bathtub, "facility":"Bathtub"},{"icon":studytable,"facility":"Study Table"},{"icon":fridge,"facility":"Mini Fridge "},{"icon":sofa,"facility":"Sofa"}],
             "index": "1"
         }
     ]
